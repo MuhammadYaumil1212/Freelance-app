@@ -82,4 +82,18 @@ class MyOrderController extends Controller
     {
         //
     }
+
+    // order approve
+    public function order_approve()
+    {
+        # code...
+    }
+
+    // order reject
+    public function reject()
+    {
+        # code...
+    }
+
+    // 
 }

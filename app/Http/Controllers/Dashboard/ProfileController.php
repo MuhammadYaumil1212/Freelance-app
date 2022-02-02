@@ -82,4 +82,10 @@ class ProfileController extends Controller
     {
         //
     }
+
+    // delete photo
+    public function delete()
+    {
+        # code...
+    }
 }

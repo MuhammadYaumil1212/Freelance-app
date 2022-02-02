@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\Dashboard\MemberController;
+use App\Http\Controllers\Dashboard\MyOrderController;
+use App\Http\Controllers\Dashboard\ProfileController;
+use App\Http\Controllers\Dashboard\RequestController;
+use App\Http\Controllers\Dashboard\ServiceController;
 use App\Http\Controllers\landing\LandingController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,8 +18,30 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('detail_book/{id}',[LandingController::class,'detail_booking'])->name('detail_booking');
+Route::get('booking/{id}',[LandingController::class,'booking'])->name('booking.landing');
+Route::get('detail/{id}',[LandingController::class,'detail'])->name('detail.landing');
+Route::get('explore',[LandingController::class,'explore'])->name('explore.landing');
+Route::resource('/',LandingController::class);
 
-Route::resources('/',LandingController::class);
+Route::prefix(['prefix' => 'member','as'=>'member.','middleware'=>['auth:sanctum','verified']],function(){
+    // Dashboard
+    Route::resource('dashboard',[MemberController::class]);
+    // service
+    Route::resource('service',[ServiceController::class]);
+    // request
+    Route::get('approve_request/{id}',[RequestController::class,'approve'])->name('approve.request');
+    Route::resource('request',[RequestController::class]);
+    // my order
+    Route::get('accept/order/{id}',[MyOrderController::class,'order_approve'])->name('accept.order');
+    Route::get('reject/order/{id}',[MyOrderController::class,'reject'])->name('reject.order');
+    Route::resource('order',[MyOrderController::class]);
+    // profile
+    Route::get('delete_photo',[ProfileController::class,'delete'])->name('delete.photo.profile');
+    Route::resource('profile',[ProfileController::class]);
+});
+
+
 
 
 

@@ -14,7 +14,7 @@ class LandingController extends Controller
      */
     public function index()
     {
-        //
+        return "Hello World";
     }
 
     /**
@@ -81,5 +81,29 @@ class LandingController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    // Detail Booking
+    public function detail_booking($id)
+    {
+        // code...
+    }
+
+    //  Booking
+    public function booking($id)
+    {
+        // code...
+    }
+
+    //  detail
+    public function detail($id)
+    {
+        // code...
+    }
+
+    //  detail
+    public function explore()
+    {
+        // code...
     }
 }
