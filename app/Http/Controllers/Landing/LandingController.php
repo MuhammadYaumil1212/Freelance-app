@@ -14,7 +14,7 @@ class LandingController extends Controller
      */
     public function index()
     {
-        return "Hello World";
+        return view('pages.landing.index');
     }
 
     /**
