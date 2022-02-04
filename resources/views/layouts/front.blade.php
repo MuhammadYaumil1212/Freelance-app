@@ -23,15 +23,15 @@
     {{-- Content --}}
       @yield('content')
       {{-- Footer --}}
-      @stack('after-style')
-
       @include('includes.landing.footer')
-
-      @stack('after-style')
+      {{-- Script --}}
+      @stack('before-script')
+        @include('includes.landing.script')
+      @stack('after-script')
       {{-- Modal --}}
       @include('components.modal.login')
       @include('components.modal.register')
-      @include('components.modal.regiser-success')
+      @include('components.modal.register-success')
   </div>
 </body>
 </html>

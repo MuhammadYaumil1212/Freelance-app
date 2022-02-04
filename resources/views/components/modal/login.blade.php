@@ -11,20 +11,27 @@
           Enter your email & password to continue
       </p>
       </div>
-      <form action="index.php" method="GET">
+    <form action="{{route('login')}}" method="POST">
+        @csrf
           <!--body-->
           <div class="relative p-6 flex-auto mx-10">
               <div class="mb-4">
-                  <label class="block text-grey-darker text-sm mb-2" for="username">
+                  <label class="block text-grey-darker text-sm mb-2" for="email">
                       Email
                   </label>
-                  <input name="email" class="appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 placeholder-serv-text text-xs" id="username" type="text" placeholder="name@domain.com">
+                  <input name="email" class="appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 placeholder-serv-text text-xs" id="email" name="email" type="text" placeholder="name@domain.com">
+                  @if ($errors->has('email'))
+                      <p class="text-red-500 mb-3 text-sm">{{$errors->first('email')}}</p>
+                  @endif
                   </div>
                   <div>
                   <label class="block text-grey-darker text-sm mb-2" for="password">
                       Password
                   </label>
                   <input name="password" class="appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 placeholder-serv-text text-xs mb-3" id="password" type="password" placeholder="At least 8 characters">
+                  @if ($errors->has('password'))
+                      <p class="text-red-500 mb-3 text-sm">{{$errors->first('password')}}</p>
+                  @endif
                   </div>
                   <div class="flex items-center justify-between">
                   <div class="inline-block text-xs text-gray-400">

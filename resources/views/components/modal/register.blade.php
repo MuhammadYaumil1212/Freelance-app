@@ -11,26 +11,45 @@
           Join Serv and start your real project
       </p>
       </div>
-      <form action="index.php" method="get">
+      <form action="{{route('register')}}" method="POST">
+        @csrf
           <!--body-->
           <div class="relative p-6 flex-auto mx-10">
               <div class="mb-4">
-                  <label class="block text-grey-darker text-sm mb-2" for="username">
+                  <label class="block text-grey-darker text-sm mb-2" for="name">
                       Full Name
                   </label>
-                  <input class="appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 placeholder-serv-text text-xs" id="username" type="text" placeholder="Your name">
+                  <input class="appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 placeholder-serv-text text-xs" id="name" type="text" placeholder="Your name">
+                  @if ($errors->has('name'))
+                      <p class="text-red-500 mb-3 text-sm">{{$errors->first('name')}}</p>
+                  @endif
               </div>
               <div class="mb-4">
                   <label class="block text-grey-darker text-sm mb-2" for="email">
                       Email
                   </label>
-                  <input class="appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 placeholder-serv-text text-xs" id="email" type="email" placeholder="name@domain.com">
+                  <input class="appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 placeholder-serv-text text-xs" id="email" name="email" type="email" placeholder="name@domain.com">
+                  @if ($errors->has('email'))
+                      <p class="text-red-500 mb-3 text-sm">{{$errors->first('email')}}</p>
+                  @endif
               </div>
               <div>
                   <label class="block text-grey-darker text-sm mb-2" for="password">
                       Password
                   </label>
                   <input class="appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 placeholder-serv-text text-xs mb-3" id="password" type="password" placeholder="At least 8 characters">
+                  @if ($errors->has('password'))
+                      <p class="text-red-500 mb-3 text-sm">{{$errors->first('password')}}</p>
+                  @endif
+              </div>
+              <div>
+                  <label class="block text-grey-darker text-sm mb-2" for="password_confirmation">
+                      password confirmation
+                  </label>
+                  <input class="appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 placeholder-serv-text text-xs mb-3" id="password_confirmation" type="password" placeholder="At least 8 characters">
+                  @if ($errors->has('password_confirmation'))
+                      <p class="text-red-500 mb-3 text-sm">{{$errors->first('password_confirmation')}}</p>
+                  @endif
               </div>
               <div class="flex items-center justify-between">
                   <div class="inline-block text-xs text-gray-400">
@@ -43,9 +62,9 @@
           <!--footer-->
           <div class="px-6 pb-6 rounded-b-xl mx-10">
               <input type="hidden" name="auth" value="true">
-              <a href="#" class="block text-center bg-serv-button text-white text-lg py-3 px-12 my-2 rounded-lg w-full" onclick="toggleModal('registerSuccessModal');toggleModal('registerModal')">
+              <button type="submit" class="block text-center bg-serv-button text-white text-lg py-3 px-12 my-2 rounded-lg w-full">
                   Sign up
-              </a>
+              </button>
               <p href="#" class="text-center py-5">
                   Already have account? <a href="#" class="text-serv-button" onclick="toggleModal('loginModal');toggleModal('registerModal') ">Sign in</a>
               </p>
