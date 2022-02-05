@@ -32,7 +32,7 @@ Route::group(['prefix' => 'member','as'=>'member.','middleware'=>['auth:sanctum'
     // service
     Route::resource('service',ServiceController::class);
     // request
-    Route::get('request/{id}',[RequestController::class,'approve'])->name('approve.request');
+    Route::get('request/{id}/aprove',[RequestController::class,'approve'])->name('approve.request');
     Route::resource('request',RequestController::class);
     // my order
     Route::get('accept/order/{id}',[MyOrderController::class,'order_approve'])->name('accept.order');

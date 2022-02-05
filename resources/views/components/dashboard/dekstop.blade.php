@@ -1,7 +1,7 @@
 <!-- Desktop sidebar -->
 <aside class="z-20 flex-shrink-0 hidden w-64 overflow-y-auto bg-white md:block" aria-label="aside">
   <div class="text-serv-bg">
-      <div class="" href="#">
+      <div class="#" href="#">
           <img src="{{asset('Assets/images/logo.svg')}}" class="object-center mx-auto my-8 ">
       </div>
       <div class="flex items-center pt-8 pl-5 space-x-2 border-t border-gray-100">
@@ -16,6 +16,7 @@
               </p>
           </div>
       </div>
+      
       <ul class="mt-6">
           <li class="relative px-6 py-3">
               <span class="absolute inset-y-0 left-0 w-1 rounded-tr-lg rounded-br-lg bg-serv-bg" aria-hidden="true"></span>
@@ -27,6 +28,7 @@
               </a>
           </li>
       </ul>
+
       <ul>
           <li class="relative px-6 py-3">
               <a class="inline-flex items-center w-full text-sm font-light transition-colors duration-150 hover:text-gray-800" href="{{route('member.service.index')}}">
