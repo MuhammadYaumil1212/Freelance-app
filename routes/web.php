@@ -25,7 +25,7 @@ Route::get('explore',[LandingController::class,'explore'])->name('explore.landin
 
 Route::resource('/',LandingController::class);
 
-Route::prefix(['prefix' => 'member','as'=>'member.','middleware'=>['auth:sanctum','verified']],function(){
+Route::group(['prefix' => 'member','as'=>'member.','middleware'=>['auth:sanctum','verified']],function(){
     // Dashboard
     Route::resource('dashboard',MemberController::class);
     // Route::get('dashboard',[MemberController::class,'index'])->name('member.dashboards');
