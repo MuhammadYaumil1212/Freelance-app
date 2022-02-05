@@ -43,68 +43,8 @@
                                       <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                                   </div>
                                   <div>
-                                      <a href="{{route('member.service.edit',1)}}" class="font-medium text-black">
+                                      <a href="{{route('member.service.show',1)}}" class="font-medium text-black">
                                           Design WordPress <br>E-Commerce Modules
-                                      </a>
-                                  </div>
-                              </div>
-                          </td>
-                          <td class="px-1 py-5 text-sm">
-                              Website Developer
-                          </td>
-                          <td class="px-1 py-5 text-sm">
-                              Rp120.000
-                          </td>
-                          <td class="px-1 py-5 text-sm text-green-500 text-md">
-                              Active
-                          </td>
-                          <td class="px-1 py-5 text-sm">
-                              <a href="{{route('member.service.edit',1)}}" class="px-4 py-2 mt-2 text-left text-white rounded-xl bg-serv-email">
-                                  Edit Service
-                              </a>
-                          </td>
-                      </tr>
-                      <tr class="text-gray-700 border-b">
-                          <td class="w-2/6 px-1 py-5">
-                              <div class="flex items-center text-sm">
-                                  <div class="relative w-10 h-10 mr-3 rounded-full md:block">
-                                      <img class="object-cover w-full h-full rounded" src="{{url('https://randomuser.me/api/portraits/men/7.jpg')}}" alt="" loading="lazy" />
-                                      <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                                  </div>
-                                  <div>
-                                      <a href="{{route('member.service.edit',1)}}"  class="font-medium text-black">
-                                      Fix Any Issue on Your <br>
-                                      WordPress Website
-                                      </a>
-                                  </div>
-                              </div>
-                          </td>
-                          <td class="px-1 py-5 text-sm">
-                              Website Developer
-                          </td>
-                          <td class="px-1 py-5 text-sm">
-                              Rp120.000
-                          </td>
-                          <td class="px-1 py-5 text-sm text-green-500 text-md">
-                              Active
-                          </td>
-                          <td class="px-1 py-5 text-sm">
-                              <a href="{{route('member.service.edit',1)}}" class="px-4 py-2 mt-2 text-left text-white rounded-xl bg-serv-email">
-                                  Edit Service
-                              </a>
-                          </td>
-                      </tr>
-                      <tr class="text-gray-700">
-                          <td class="w-2/6 px-1 py-5">
-                              <div class="flex items-center text-sm">
-                                  <div class="relative w-10 h-10 mr-3 rounded-full md:block">
-                                      <img class="object-cover w-full h-full rounded" src="{{url('https://randomuser.me/api/portraits/men/5.jpg')}}" alt="" loading="lazy" />
-                                      <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                                  </div>
-                                  <div>
-                                      <a href="{{route('member.service.edit',1)}} class="font-medium text-black">
-                                      Create a UI Design <br>
-                                      for Your Application
                                       </a>
                                   </div>
                               </div>

@@ -46,7 +46,7 @@ class ServiceController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('pages.dashboard.service.detail');
     }
 
     /**
@@ -82,5 +82,4 @@ class ServiceController extends Controller
     {
         //
     }
-
 }
