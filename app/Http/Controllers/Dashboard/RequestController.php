@@ -86,6 +86,6 @@ class RequestController extends Controller
     // approve request
     public function approve()
     {
-        # code...
+        // return view('pages.dashboard.request.approve');
     }
 }
