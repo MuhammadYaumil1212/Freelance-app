@@ -19,7 +19,7 @@
                   <label class="block text-grey-darker text-sm mb-2" for="name">
                       Full Name
                   </label>
-                  <input class="appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 placeholder-serv-text text-xs" id="name" type="text" placeholder="Your name">
+                  <input class="appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 placeholder-serv-text text-xs" id="name" name="name" type="text" placeholder="Your name">
                   @if ($errors->has('name'))
                       <p class="text-red-500 mb-3 text-sm">{{$errors->first('name')}}</p>
                   @endif
@@ -37,7 +37,7 @@
                   <label class="block text-grey-darker text-sm mb-2" for="password">
                       Password
                   </label>
-                  <input class="appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 placeholder-serv-text text-xs mb-3" id="password" type="password" placeholder="At least 8 characters">
+                  <input class="appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 placeholder-serv-text text-xs mb-3" id="password" name="password" type="password" placeholder="At least 8 characters">
                   @if ($errors->has('password'))
                       <p class="text-red-500 mb-3 text-sm">{{$errors->first('password')}}</p>
                   @endif
@@ -46,7 +46,7 @@
                   <label class="block text-grey-darker text-sm mb-2" for="password_confirmation">
                       password confirmation
                   </label>
-                  <input class="appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 placeholder-serv-text text-xs mb-3" id="password_confirmation" type="password" placeholder="At least 8 characters">
+                  <input class="appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 placeholder-serv-text text-xs mb-3" id="password_confirmation" name="password_confirmation" type="password" placeholder="At least 8 characters">
                   @if ($errors->has('password_confirmation'))
                       <p class="text-red-500 mb-3 text-sm">{{$errors->first('password_confirmation')}}</p>
                   @endif
